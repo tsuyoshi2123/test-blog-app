@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - '2345:2345'
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: hoge
+      MYSQL_DATABASE: blog
+    volumes:
+      - ./db:/var/lib/mysql
