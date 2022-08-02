@@ -1,0 +1,133 @@
+p {
+    margin-bottom: 0;
+    line-height: 1;
+    
+}
+
+.header-top {
+    background-color: #AAE0C2;
+    width: 1440px;
+    height: 80px;
+    position: relative;
+    margin-bottom: 135px;
+}
+
+.header-title {
+    font-size: 15px;
+    top: 30px;
+    left: 40px;
+    position: absolute;
+    font-weight: normal;
+}
+
+.index-wrapper {
+    width: 1314px;
+    margin-left: 64px;
+}
+
+.index-title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.index-content {
+    width: 1314px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.index-content-columns {
+    display: flex;
+}
+
+.index-content-columns:nth-child(n) {
+    margin-top: 23px;
+    margin-bottom: 19px;
+}
+
+.index-content-columns :nth-child(1) {
+    margin-left: 122px;
+}
+
+.index-content-columns :nth-child(2) {
+    margin-left: 163px;
+}
+
+.index-content-columns :nth-child(3) {
+    margin-left: 135px;
+}
+
+.index-content-columns :nth-child(4) {
+    margin-left: 189px;
+}
+
+.index-content-columns :nth-child(5) {
+    margin-left: 171px;
+}
+
+
+.index-column-values {
+    display: flex;
+    width: 1171px;
+    height: 54px;
+    margin-left: 69px;
+    margin-bottom: 47px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.index-column-values :nth-child(n) {
+    margin-top: 15px;
+}
+
+.index-column-values :nth-child(1) {
+    margin-left: 54px;
+}
+
+.index-column-values :nth-child(2) {
+    margin-left: 153px;
+}
+
+.index-column-values :nth-child(3) {
+    margin-left: 119px;
+}
+
+.index-column-values :nth-child(4) {
+    margin-left: 175px;
+}
+
+.index-column-values :nth-child(5) {
+    margin-left: 129px;
+}
+
+.index-column-values :nth-child(6) {
+    margin-left: 43px;
+    margin-top: 8px;
+}
+.index-column-values :nth-child(7) {
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+
+.edit {
+    width: 47px;
+    height: 37px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #BAEAE6;
+    text-align: center;
+    line-height: 32px;
+}
+
+.delete {
+    width: 47px;
+    height: 37px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #F0CFEC;
+    text-align: center;
+    line-height: 32px;
+}
