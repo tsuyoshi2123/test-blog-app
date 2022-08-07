@@ -23,34 +23,17 @@
                 <p>コメント</p>
                 <p>日付</p>
             </div>
-            <div class="index-column-values">
-                <p>1</p>
-                <p>山田太郎</p>
-                <p>オムライス</p>
-                <p>おいちかった</p>
-                <p>1996/07070</p>
-                <p class="edit">編集</p>
-                <a class="delete">削除</a>
-            </div>
-            <div class="index-column-values">
-                <p>1</p>
-                <p>山田太郎</p>
-                <p>オムライス</p>
-                <p>おいちかった</p>
-                <p>1996/07070</p>
-                <p class="edit">編集</p>
-                <a class="delete">削除</a>
-            </div>
-            <div class="index-column-values">
-                <p>1</p>
-                <p>山田太郎</p>
-                <p>オムライス</p>
-                <p>おいちかった</p>
-                <p>1996/07070</p>
-                <p class="edit">編集</p>
-                <a class="delete">削除</a>
-            </div>
-
+            @foreach ($hoge as $item)
+                <div class="index-column-values">
+                    <p>{{ $item['id'] }}</p>
+                    <p>{{ $item['name'] }}</p>
+                    <p>{{ $item['food'] }}</p>
+                    <p>{{ $item['comment'] }}</p>
+                    <p>{{ $item['created_at'] }}</p>
+                    <a class="edit">編集</a>
+                    <a class="delete">削除</a>
+                </div>
+            @endforeach
         </div>
     </div>
 </body>
