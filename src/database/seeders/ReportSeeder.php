@@ -20,7 +20,7 @@ class ReportSeeder extends Seeder
             'food' => 'コロッケ',
             'comment' => '美味しい',
             'created_at' => Carbon::now(),
-            'updated_at' => carbon::now()
+            'updated_at' => Carbon::now()
         ]);
     }
 }

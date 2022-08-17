@@ -18,7 +18,8 @@ class CreateReportsTable extends Migration
             $table->string('name');
             $table->string('food');
             $table->string('comment');
-            $table->timestamps(carbon::now());
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 
