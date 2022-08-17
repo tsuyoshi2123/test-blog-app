@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-    <title>index_view</title>
+    <title>create_view</title>
 </head>
 <body>
     <div class="header-top">
@@ -31,12 +31,13 @@
             <input type="text" name="" id="create-time">
         </div>
         <div class="btn-box">
-            <form action="index.php" method="post">
+            {!! Form::open(['route' => 'blog.index' , 'method' => 'GET']) !!}
+                @csrf
                 <button type="submit" class="index-btn">戻る</button>
-            </form>
-            <form action="create.php" method="post">
+            {!! Form::close() !!}
+            {!! Form::open(['route' => 'blog.store']) !!}
                 <button type="submit" class="create-btn">作成</button>
-            </form>
+            {!! Form::close() !!}
         </div>
     </div>
 </body>
