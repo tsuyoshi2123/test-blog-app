@@ -18,6 +18,7 @@ class CreateReportsTable extends Migration
             $table->string('name');
             $table->string('food');
             $table->string('comment');
+            $table->string('time');
             $table->timestamps();
             $table->softDeletes();
         });

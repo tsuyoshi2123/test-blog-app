@@ -19,6 +19,7 @@ class ReportSeeder extends Seeder
             'name' => 'dev-mizuno',
             'food' => 'コロッケ',
             'comment' => '美味しい',
+            'time' => Carbon::now()->format('Y-m-d'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
