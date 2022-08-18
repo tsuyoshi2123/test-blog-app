@@ -37,7 +37,11 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ate_recod = $request->all();
+        $report = new Report;
+        $report->fill($ate_recod)->save();
+
+        return redirect()->route('blog.index');
     }
 
     /**
