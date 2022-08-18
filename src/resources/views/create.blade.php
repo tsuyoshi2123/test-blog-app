@@ -16,27 +16,27 @@
     <div class="create-wrapper">
         <div class="create-box">
             <p class="name">名前</p>
-            <input type="text" name="" id="create-name">
+            {!! Form::input('text', 'name', null, ['id' => 'create-name', 'form' => 'create-new']) !!}
         </div>
         <div class="create-box">
             <p class="eate">食べたご飯</p>
-            <input type="text" name="" id="create-eate">
+            {!! Form::input('text', 'food', null, ['id' => 'create-eate', 'form' => 'create-new']) !!}
         </div>
         <div class="create-box">
             <p class="comment">コメント</p>
-            <input type="text" name="" id="create-comment">
+            {!! Form::input('text', 'comment', null, ['id' => 'create-comment', 'form' => 'create-new']) !!}
         </div>
         <div class="create-box">
             <p class="time">日付</p>
-            <input type="text" name="" id="create-time">
+            {!! Form::date('day', Carbon::now(), ['id'=>'create-time', 'name' => 'time', 'form' => 'create-new']) !!}
         </div>
         <div class="btn-box">
             {!! Form::open(['route' => 'blog.index' , 'method' => 'GET']) !!}
                 @csrf
-                <button type="submit" class="index-btn">戻る</button>
+                {!! Form::submit('戻る', ['class' => 'index-btn']) !!}
             {!! Form::close() !!}
-            {!! Form::open(['route' => 'blog.store']) !!}
-                <button type="submit" class="create-btn">作成</button>
+            {!! Form::open(['route' => 'blog.store', "id" => "create-new"]) !!}
+                {!! Form::submit('作成', ['class' => 'create-btn']) !!}
             {!! Form::close() !!}
         </div>
     </div>
