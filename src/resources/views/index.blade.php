@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class="header-top">
-        <h2 class="header-title">BLOG APP</h2>
+            <h2 class="header-title">BLOG APP</h2>
+            <a href="blog/create" class="header-eate">記録作成</a>
     </div>
 
     <div class="index-wrapper">

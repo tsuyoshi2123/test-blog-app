@@ -7,16 +7,30 @@ p {
     background-color: #AAE0C2;
     width: 1440px;
     height: 80px;
-    position: relative;
     margin-bottom: 135px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
 }
 
 .header-title {
     font-size: 15px;
-    top: 30px;
-    left: 40px;
-    position: absolute;
-    font-weight: normal;
+    line-height: 1;
+    margin-left: 43px;
+}
+
+.header-eate:hover {
+    text-decoration:none;
+}
+
+.header-eate {
+    line-height: 1;
+    margin-right: 46px;
+    border-radius: 10px;
+    background-color: #FEFADA;
+    display: block;
+    padding: 8px 10px;
+    color: #000;
 }
 
 .index-wrapper {
