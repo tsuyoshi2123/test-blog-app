@@ -190,7 +190,7 @@ p {
     margin-left: 188px;
 }
 
-.index-btn , .create-btn { 
+.index-btn , .create-btn, .edit-btn { 
     border: 1px solid #000;
     border-radius: 30px;
     font-size: 15px;
@@ -201,7 +201,7 @@ p {
     background-color: #B3CDE6;
 }
 
-.create-btn {
+.create-btn, .edit-btn {
     margin-left: 121px;
     background-color: #FEFADA;
 }

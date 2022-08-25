@@ -61,9 +61,15 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function edit(Blog $blog)
+    public function edit($blog_id)
     {
-        //
+        $report = Report::get();
+        foreach ($report as $data) {
+            if($data->id == $blog_id) {
+                $blog = $data;
+            }
+        }
+        return view('edit', compact('blog', 'blog_id'));
     }
 
     /**
@@ -73,9 +79,11 @@ class BlogController extends Controller
      * @param  \App\Models\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, $blog_id)
     {
-        //
+        $report = Report::get();
+        $report->find($blog_id)->fill($request->all())->save();
+        return redirect()->route('blog.index');
     }
 
     /**
