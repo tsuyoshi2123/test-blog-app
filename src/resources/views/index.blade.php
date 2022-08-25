@@ -10,8 +10,8 @@
 </head>
 <body>
     <div class="header-top">
-            <h2 class="header-title">BLOG APP</h2>
-            <a href="blog/create" class="header-eate">記録作成</a>
+        <h2 class="header-title">BLOG APP</h2>
+        <a href="blog/create" class="header-eate">記録作成</a>
     </div>
 
     <div class="index-wrapper">
@@ -30,9 +30,9 @@
                     <p>{{ $item['name'] }}</p>
                     <p>{{ $item['food'] }}</p>
                     <p>{{ $item['comment'] }}</p>
-                    <p>{{ $item['created_at'] }}</p>
-                    <a class="edit">編集</a>
-                    <a class="delete">削除</a>
+                    <p>{{ $item['time'] }}</p>
+                    <a class="edit" href="{{ route('blog.edit', $item['id']) }}">編集</a>
+                    <a class="delete" href="{{ route('blog.destroy', $item['id']) }}">削除</a>
                 </div>
             @endforeach
         </div>
