@@ -26,13 +26,15 @@
             </div>
             @foreach ($hoge as $item)
                 <div class="index-column-values">
-                    <p>{{ $item['id'] }}</p>
-                    <p>{{ $item['name'] }}</p>
-                    <p>{{ $item['food'] }}</p>
-                    <p>{{ $item['comment'] }}</p>
-                    <p>{{ $item['time'] }}</p>
-                    <a class="edit" href="{{ route('blog.edit', $item['id']) }}">編集</a>
-                    <a class="delete" href="{{ route('blog.destroy', $item['id']) }}">削除</a>
+                    <p class="index-column-values-id">{{ $item['id'] }}</p>
+                    <p class="index-column-values-name">{{ $item['name'] }}</p>
+                    <p class="index-column-values-food">{{ $item['food'] }}</p>
+                    <p class="index-column-values-comment">{{ $item['comment'] }}</p>
+                    <p class="index-column-values-time">{{ $item['time'] }}</p>
+                    <a class="index-column-values-edit" href="{{ route('blog.edit', $item['id']) }}">編集</a>
+                    {!! Form::open(['route' => ['blog.destroy', $item['id']], 'method' => 'DELETE', 'class' => 'delete']) !!}
+                        {!! Form::button('削除', ['type' => 'submit', 'class' => 'delete-btn']) !!}
+                    {!! Form::close() !!}
                 </div>
             @endforeach
         </div>
