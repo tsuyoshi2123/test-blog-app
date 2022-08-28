@@ -33,6 +33,10 @@ p {
     color: #000;
 }
 
+.error-message {
+    font-size: 8px;
+}
+
 .index-wrapper {
     width: 1314px;
     margin-left: 64px;
@@ -161,10 +165,31 @@ p {
 }
 
 .create-box {
-    height: 54px;
+    height: 99px;
+}
+
+.create-box > .error-message {
+    text-align: left;
+    color: #E83929;
+    margin-top: 2px;
+}
+
+.has-error > .create-box-content > #create-name,
+.has-error > .create-box-content > #create-time {
+    border-color: #E83929;
+}
+
+.create-box-content {
+    justify-content: space-between;
     display: flex;
-    align-items: center;
-    margin-bottom: 44px;
+}
+
+.create-box-content > .name,
+.create-box-content > .food,
+.create-box-content > .comment,
+.create-box-content > .time {
+    margin-top: 18px;
+    height: 20px;
 }
 
 #create-name, #create-eate, #create-comment, #create-time {
@@ -174,9 +199,7 @@ p {
     width: 335px;
 }
 
-#create-name {
-    margin-left: 113px;
-}
+#create-name {}
 
 #create-eate {
     margin-left: 65px;
