@@ -91,7 +91,11 @@ p {
     border-radius: 10px;
 }
 
-.index-column-values :nth-child(n) {
+.index-column-values :nth-child(1),
+.index-column-values > .index-column-values-name, 
+.index-column-values :nth-child(3),
+.index-column-values :nth-child(4),
+.index-column-values :nth-child(5) {
     margin-top: 15px;
 }
 
@@ -99,8 +103,8 @@ p {
     margin-left: 54px;
 }
 
-.index-column-values :nth-child(2) {
-    margin-left: 153px;
+.index-column-values > .index-column-values-name {
+    margin-left: 130px;
 }
 
 .index-column-values :nth-child(3) {
@@ -116,12 +120,13 @@ p {
 }
 
 .index-column-values :nth-child(6) {
-    margin-left: 43px;
-    margin-top: 8px;
+    margin-top: 10px;
+    margin-left: 50px;
 }
-.index-column-values :nth-child(7) {
-    margin-left: 30px;
-    margin-top: 8px;
+.index-column-values > .delete {
+    margin-top: 10px;
+    margin-left: 50px;
+    display: inline-block;
 }
 
 
@@ -135,7 +140,7 @@ p {
     line-height: 32px;
 }
 
-.delete {
+.delete-btn {
     width: 47px;
     height: 37px;
     border: 1px solid black;
