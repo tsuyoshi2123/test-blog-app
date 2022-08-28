@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Report;
 use Illuminate\Http\Request;
+use App\Http\Requests\BlogRequest;
 
 class BlogController extends Controller
 {
@@ -31,14 +32,14 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\BlogRequest  $blogRequest
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BlogRequest $blogRequest)
     {
-        $ate_recod = $request->all();
+        $ateData = $blogRequest->all();
         $report = new Report;
-        $report->fill($ate_recod)->save();
+        $report->fill($ateData)->save();
 
         return redirect()->route('blog.index');
     }
