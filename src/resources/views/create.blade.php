@@ -12,7 +12,7 @@
     <div class="header-top">
         <h2 class="header-title">BLOG TOP</h2>
     </div>
-    <h2 class="create-title">メシ投稿</h2>
+    <h2 class="create-title">メッシ投稿</h2>
     <div class="create-wrapper">
         <div class="create-box">
             <p class="name">名前</p>
