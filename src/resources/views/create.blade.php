@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>create_view</title>
-</head>
-<body>
-    <div class="header-top">
-        <h2 class="header-title">BLOG TOP</h2>
-    </div>
-    <h2 class="create-title">メッシ投稿</h2>
-    <div class="create-wrapper">
+@extends('common')
+@section('content')
+        <h2 class="create-title">メッシ投稿</h2>
+        <div class="create-wrapper">
         <div class="create-box @if($errors->has('name')) has-error @endif">
             <div class="create-box-content">
                 <p class="name">名前</p>
@@ -68,5 +56,4 @@
             {!! Form::close() !!}
         </div>
     </div>
-</body>
-</html>
+@endsection

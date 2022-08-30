@@ -24,8 +24,8 @@ p {
 }
 
 .header-eate {
+    width: 90px;
     line-height: 1;
-    margin-right: 46px;
     border-radius: 10px;
     background-color: #FEFADA;
     display: block;
