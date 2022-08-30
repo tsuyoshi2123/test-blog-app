@@ -31,7 +31,7 @@
                     <p class="index-column-values-food">{{ $item['food'] }}</p>
                     <p class="index-column-values-comment">{{ $item['comment'] }}</p>
                     <p class="index-column-values-time">{{ $item['time'] }}</p>
-                    <a class="index-column-values-edit" href="{{ route('blog.edit', $item['id']) }}">編集</a>
+                    <a class="edit" href="{{ route('blog.edit', $item['id']) }}">編集</a>
                     {!! Form::open(['route' => ['blog.destroy', $item['id']], 'method' => 'DELETE', 'class' => 'delete']) !!}
                         {!! Form::button('削除', ['type' => 'submit', 'class' => 'delete-btn']) !!}
                     {!! Form::close() !!}
