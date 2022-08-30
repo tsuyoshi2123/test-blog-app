@@ -13,8 +13,14 @@ class ReportFactory extends Factory
      */
     public function definition()
     {
+        $faker = \Faker\Factory::create();
+        $faker->addProvider(new \FakerRestaurant\Provider\ja_JP\Restaurant($faker));
+
         return [
-            //
+            'name' => $this->faker->name(),
+            'food' => $faker->foodName(),
+            'comment' => $this->faker->realText(30),
+            'time' => now()->format('Y-m-d'),
         ];
     }
 }
